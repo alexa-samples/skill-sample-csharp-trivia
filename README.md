@@ -1,2 +1,2 @@
-# skill-sample-csharp-quiz-game
-An Alexa Skill Sample showing how to build a quiz game skill in C#.
+# alexa-skill-sample-csharp-trivia
+An Alexa Skill Sample showing how to build a trivia skill in C Sharp 
