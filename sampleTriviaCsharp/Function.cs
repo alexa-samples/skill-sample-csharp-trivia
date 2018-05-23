@@ -98,7 +98,7 @@ namespace sampleTriviaCsharp
         /// <param name="skillinput"></param>
         /// <param name="intentrequest"></param>
         /// <param name="resource"></param>
-        /// <returns>void</returns
+        /// <returns>void</returns>
         private void GameStateHandler(SkillRequest input, Request intentRequest, QuestionsResource resource)
         {
             if (IsDialogIntentRequest(input))
@@ -153,7 +153,7 @@ namespace sampleTriviaCsharp
         /// <param name="skillinput"></param>
         /// <param name="intentrequest"></param>
         /// <param name="resource"></param>
-        /// <returns>void</returns
+        /// <returns>void</returns>
         private void HelpStateHandler(bool game, SkillRequest input, Request intentRequest, QuestionsResource resource)
         {
             Dictionary<string, object> sessionData = input.Session.Attributes;
@@ -208,7 +208,7 @@ namespace sampleTriviaCsharp
         /// </summary>
         /// <param name="game"></param>
         /// <param name="resource"></param>
-        /// <returns>void</returns
+        /// <returns>void</returns>
         private void HelpHandler(bool game, QuestionsResource resource)
         {
             var askMessage = game ? resource.AskMessageStart : resource.RepeatQuestionMessage + resource.AskMessageStart;
@@ -222,7 +222,7 @@ namespace sampleTriviaCsharp
         /// </summary>
         /// <param name="game"></param>
         /// <param name="resource"></param>
-        /// <returns>void</returns
+        /// <returns>void</returns>
         private void GameStartHandler(bool newGame, QuestionsResource resource)
         {
             var message = string.Format(resource.NewGameMessage, resource.gameName)
@@ -264,7 +264,7 @@ namespace sampleTriviaCsharp
         /// <param name="input"></param>
         /// <param name="intent"></param>
         /// <param name="resource"></param>
-        /// <returns>void</returns
+        /// <returns>void</returns>
         private void HandleUserGuess(bool userGaveUp, SkillRequest input, Intent intent, QuestionsResource resource)
         {
             Dictionary<string, object> sessionData = input.Session.Attributes;
@@ -355,7 +355,7 @@ namespace sampleTriviaCsharp
         ///  get a list of answers
         /// </summary>
         /// <param name="answerList"></param>
-        /// <returns>answerlist</returns
+        /// <returns>answerlist</returns>
         private List<Answers> GetAnswersList(List<Answers> answerList)
         {
             List<Answers> answers = new List<Answers>();
@@ -372,7 +372,7 @@ namespace sampleTriviaCsharp
         /// <param name="intent"></param>
         /// <param name="correctAnswerIndex"></param>
         /// <param name="resource"></param>
-        /// <returns>true if a match fails otherwise</returns
+        /// <returns>true if a match fails otherwise</returns>
         private bool MatchUserGuessWithAnswer(Intent intent, int correctAnswerIndex, QuestionsResource resource)
         {
             Dictionary<string, Slot> slots = intent.Slots;
@@ -411,7 +411,7 @@ namespace sampleTriviaCsharp
         /// <param name="output"></param>
         /// <param name="reprompt"></param>
         /// <param name="shouldEndSession"></param>
-        /// <returns>void</returns
+        /// <returns>void</returns>
         private void BuildSpeechResponse(string title, string speechOutput, string reprompt, bool shouldEndSession)
         {
             if (title != string.Empty)
@@ -444,7 +444,7 @@ namespace sampleTriviaCsharp
         /// </summary>
         /// <param name="resource, resource for current locale"></param>
         /// <param name="withPreface"></param>
-        /// <returns>list of question</returns
+        /// <returns>list of question</returns>
         private List<Questions> GetGameQuestions(QuestionsResource resource, bool withPreface)
         {
             // Pick GAME_LENGTH random questions from the list to ask the user, make sure there are no repeats.
@@ -476,7 +476,7 @@ namespace sampleTriviaCsharp
         /// <param name="questions"></param>
         /// <param name="currentQuestionIndex"></param>
         /// <param name="correctAnswerTargetLocation"></param>
-        /// <returns>string []</returns
+        /// <returns>string []</returns>
         private string[] GetShuffledAnswers(Questions questions, int currentQuestionIndex, int correctAnswerTargetLocation)
         {
             string[] answers = new string[ANSWER_COUNT];
@@ -518,7 +518,7 @@ namespace sampleTriviaCsharp
         /// <param name="question"></param>
         /// <param name="shuffledAnswers"></param>
         /// <param name="currentQuestionIndex"></param>
-        /// <returns>string of answers</returns
+        /// <returns>string of answers</returns>
         private string GetAllAnswersText(Questions question, string[] shuffledAnswers, int currentQuestionIndex)
         {
             StringBuilder sb = new StringBuilder();
