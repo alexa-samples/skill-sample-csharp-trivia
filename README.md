@@ -1,3 +1,6 @@
+# ** This repository has been archived **
+This repository is still available as a point-in-time reference, but no further updates or support will be prioritized.
+
 # Build An Alexa Trivia Skill in C#
 ![](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/fact/header._TTH_.png)
 
